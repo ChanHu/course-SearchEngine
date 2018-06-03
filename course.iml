@@ -12,7 +12,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -24,7 +24,21 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Hibernate 5.2.16-5.2.16" level="project" />
-    <orderEntry type="library" name="mysql-connector-java-5.1.46" level="project" />
-    <orderEntry type="library" name="lucene-core-7.0.0" level="project" />
+    <orderEntry type="library" name="IKAnalyzer6.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-core:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-analyzers-common:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queryparser:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-queries:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-sandbox:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-demo:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-expressions:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.lucene:lucene-facet:6.6.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.4" level="project" />
+    <orderEntry type="library" name="Maven: org.antlr:antlr4-runtime:4.5.1-1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.ow2.asm:asm-commons:5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wisdom-framework:mysql-connector-java:5.1.34_1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.felix:org.apache.felix.ipojo.annotations:1.12.1" level="project" />
+    <orderEntry type="library" name="Maven: org.wisdom-framework:abstract-jdbc-driver:0.5" level="project" />
   </component>
 </module>

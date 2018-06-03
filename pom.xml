@@ -7,5 +7,48 @@
     <groupId>search</groupId>
     <artifactId>course</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-core</artifactId>
+            <version>6.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers-common</artifactId>
+            <version>6.6.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-queryparser</artifactId>
+            <version>6.6.0</version>
+        </dependency>
+        <!-- 官方测试例子 -->
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-demo</artifactId>
+            <version>6.6.0</version>
+        </dependency>
+        <!--Information-->
+        <!--Apache Maven-->
+        <dependency>
+            <groupId>org.wisdom-framework</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.34_1</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
