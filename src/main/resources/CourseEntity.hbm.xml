@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Dao.CourseEntity" table="course" schema="course">
+        <id name="couId">
+            <column name="CouId" sql-type="varchar(255)"/>
+        </id>
+        <property name="couName">
+            <column name="CouName" sql-type="varchar(255)"/>
+        </property>
+        <property name="couTeacher">
+            <column name="CouTeacher" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="couSchool">
+            <column name="CouSchool" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="couEval">
+            <column name="CouEval" sql-type="float(6,3)" precision="6" scale="3" not-null="true"/>
+        </property>
+        <property name="couEvalAmount">
+            <column name="CouEvalAmount" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="couAttendAmount">
+            <column name="CouAttendAmount" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="couIsCountry">
+            <column name="CouIsCountry" sql-type="tinyint(1)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
