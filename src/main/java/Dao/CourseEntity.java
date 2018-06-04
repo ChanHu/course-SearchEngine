@@ -13,6 +13,7 @@ public class CourseEntity {
     private Integer couEvalAmount;
     private Integer couAttendAmount;
     private Byte couIsCountry;
+    private Double couScore;
 
     @Id
     @Column(name = "CouId", nullable = false, length = 255)
@@ -94,6 +95,16 @@ public class CourseEntity {
         this.couIsCountry = couIsCountry;
     }
 
+    @Basic
+    @Column(name = "CouScore", nullable = true, precision = 10)
+    public Double getCouScore() {
+        return couScore;
+    }
+
+    public void setCouScore(Double couScore) {
+        this.couScore = couScore;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -111,6 +122,7 @@ public class CourseEntity {
         if (couAttendAmount != null ? !couAttendAmount.equals(that.couAttendAmount) : that.couAttendAmount != null)
             return false;
         if (couIsCountry != null ? !couIsCountry.equals(that.couIsCountry) : that.couIsCountry != null) return false;
+        if (couScore != null ? !couScore.equals(that.couScore) : that.couScore != null) return false;
 
         return true;
     }
@@ -125,6 +137,7 @@ public class CourseEntity {
         result = 31 * result + (couEvalAmount != null ? couEvalAmount.hashCode() : 0);
         result = 31 * result + (couAttendAmount != null ? couAttendAmount.hashCode() : 0);
         result = 31 * result + (couIsCountry != null ? couIsCountry.hashCode() : 0);
+        result = 31 * result + (couScore != null ? couScore.hashCode() : 0);
         return result;
     }
 }

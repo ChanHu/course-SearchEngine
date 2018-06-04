@@ -1,67 +1,13 @@
-//import Dao.CourseEntity;
-//import org.apache.lucene.analysis.Analyzer;
-//import org.apache.lucene.analysis.standard.StandardAnalyzer;
-//import org.apache.lucene.document.Document;
-//import org.apache.lucene.document.Field;
-//import org.apache.lucene.index.IndexWriter;
-//import org.apache.lucene.store.Directory;
-//import org.apache.lucene.store.FSDirectory;
-//
-//
-//import java.io.File;
-//import java.util.ArrayList;
-//import java.util.List;
-//
-//public class CreatIndexWriter {
-//    public static void main( String[] args) throws Exception {
-//        List<CourseEntity> courses=new QueryCouseList().queryCourseList();
-//        List<Document> doclist=new ArrayList<Document>();
-//        Document document;
-//        for(CourseEntity course: courses){
-//            document=new Document();
-//            Field id = new Field("id",course.getCouId().toString(),true,true,true);
-//            Field name =  new Field("name",course.getCouName(),true,true,true);
-//            Field Eval = new Field("Eval",course.getCouEval().toString(),true,true,true);
-//            Field EvalAmount = new Field("EvalAmount",course.getCouEvalAmount().toString(),true,true,true);
-//            Field AttendAmount = new Field("AttendAmount",course.getCouAttendAmount().toString(),true,true,true);
-//            Field school = new Field("school",course.getCouName(),true,true,true);
-//
-//            document.add(id);
-//            document.add(name);
-//            document.add(school);
-//            document.add(Eval);
-//            document.add(EvalAmount);
-//            document.add(AttendAmount);
-//            doclist.add(document);
-//        }
-//        Analyzer analyzer= new StandardAnalyzer();
-//
-//        File indexFile = new File("D:/LueneIndex/index");
-//        Directory directory = FSDirectory.getDirectory(indexFile, true);
-//        IndexWriter writer = new IndexWriter(directory, analyzer,true);
-//
-//
-//        for(Document doc: doclist) {
-//            writer.addDocument(doc);
-//        }
-//    }
-//
-//
-//}
 import Dao.CourseEntity;
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
-import org.apache.lucene.document.LegacyLongField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
-import java.io.IOException;
-import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -69,9 +15,7 @@ import java.util.List;
 
 import static org.apache.lucene.document.TextField.TYPE_STORED;
 
-/**
- * Created by MoSon on 2017/6/30.
- */
+
 public class CreateIndex {
 
     public static void main(String[] args) throws Exception {
@@ -100,6 +44,7 @@ public class CreateIndex {
             Field EvalAmount = new Field("EvalAmount",course.getCouEvalAmount().toString(),TYPE_STORED);
             Field AttendAmount = new Field("AttendAmount",course.getCouAttendAmount().toString(),TYPE_STORED);
             Field school = new Field("school",course.getCouName(),TYPE_STORED);
+            Field Score = new Field("score",course.getCouScore().toString(),TYPE_STORED);
 
             document.add(id);
             document.add(name);
@@ -107,6 +52,7 @@ public class CreateIndex {
             document.add(Eval);
             document.add(EvalAmount);
             document.add(AttendAmount);
+            document.add(Score);
             doclist.add(document);
         }
 

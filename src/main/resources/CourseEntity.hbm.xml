@@ -29,5 +29,8 @@
         <property name="couIsCountry">
             <column name="CouIsCountry" sql-type="tinyint(1)" not-null="true"/>
         </property>
+        <property name="couScore">
+            <column name="CouScore" sql-type="double(255,10)" precision="255" scale="10" not-null="true"/>
+        </property>
     </class>
 </hibernate-mapping>
