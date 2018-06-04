@@ -1,3 +1,5 @@
+package servlet;
+
 import Dao.CourseEntity;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

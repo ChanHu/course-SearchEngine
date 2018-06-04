@@ -1,3 +1,5 @@
+
+
 import Dao.CourseEntity;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.document.Document;
@@ -7,6 +9,7 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.wltea.analyzer.lucene.IKAnalyzer;
+import servlet.QueryCouseList;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -43,7 +46,13 @@ public class CreateIndex {
             Field Eval = new Field("Eval",course.getCouEval().toString(),TYPE_STORED);
             Field EvalAmount = new Field("EvalAmount",course.getCouEvalAmount().toString(),TYPE_STORED);
             Field AttendAmount = new Field("AttendAmount",course.getCouAttendAmount().toString(),TYPE_STORED);
-            Field school = new Field("school",course.getCouName(),TYPE_STORED);
+
+                Field school = new Field("school","null",TYPE_STORED);
+
+            if(course.getCouSchool()!=null) {
+                school = new Field("school", course.getCouSchool(), TYPE_STORED);
+            }
+
             Field Score = new Field("score",course.getCouScore().toString(),TYPE_STORED);
 
             document.add(id);

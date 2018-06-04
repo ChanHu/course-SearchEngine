@@ -107,7 +107,7 @@ body {
    <h1 class="center-align flow-text">寻找课程</h1>
     <div class="col s12">
       <div class="row">
-      <form action="data" method="GET">
+      <form action="/data" method="GET" enctype="utf-8">
         <div class="col s1 valign-wrapper" style> 
          <a class="btn-floating btn-large waves-effect waves-light gerrn"><i class="material-icons">CHZ</i></a>
         </div>
